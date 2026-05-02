@@ -1,10 +1,10 @@
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 82vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding-top: 100px;
+  padding-top: 88px;
 }
 
 .hero__bg {
@@ -80,8 +80,8 @@
   flex: 1;
   display: flex;
   align-items: center;
-  padding: 160px 0 120px;
-  min-height: calc(100vh - 100px);
+  padding: 120px 0 84px;
+  min-height: calc(82vh - 88px);
 }
 
 .hero__content {
@@ -208,7 +208,7 @@
   color: #ffffff;
   font-weight: 700;
   line-height: 1.8;
-  margin-bottom: 44px;
+  margin-bottom: 28px;
   max-width: 520px;
   text-shadow: 0 1px 6px rgba(0,0,0,0.4);
   opacity: 0;
@@ -262,7 +262,7 @@
   display: flex;
   align-items: center;
   gap: 24px;
-  margin-top: 32px;
+  margin-top: 22px;
   animation: heroFadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 1.05s both;
 }
 
@@ -287,7 +287,7 @@
   position: relative;
   z-index: 2;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 32px 0;
+  padding: 20px 0;
 }
 
 .hero__stats-inner {
@@ -330,11 +330,11 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 100vh;
+    min-height: 90vh;
   }
 
   .hero__inner {
-    padding: 140px 0 40px;
+    padding: 120px 0 32px;
   }
 
   .hero__tagline {

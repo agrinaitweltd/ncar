@@ -1,4 +1,12 @@
 /* ========== Home: Services ========== */
+.home-page--compact .section {
+  padding: 72px 0;
+}
+
+.home-page--compact .section-subtitle {
+  margin-bottom: 40px;
+}
+
 .home-services {
   background: var(--bg);
 }
@@ -45,7 +53,7 @@
 }
 
 .home-svc-card__body {
-  padding: 24px;
+  padding: 20px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -109,7 +117,7 @@
 .home-about-breezyee__inner {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 64px;
+  gap: 40px;
   align-items: center;
 }
 
@@ -173,23 +181,23 @@
 .home-about-breezyee__title {
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   font-weight: 800;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
   line-height: 1.15;
   letter-spacing: -0.02em;
 }
 
 .home-about-breezyee__text {
   color: var(--text-light);
-  line-height: 1.8;
-  margin-bottom: 24px;
+  line-height: 1.7;
+  margin-bottom: 18px;
   font-size: 0.95rem;
 }
 
 .home-about-breezyee__features {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-bottom: 24px;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .home-about-breezyee__feature {
@@ -236,22 +244,41 @@
   height: auto;
 }
 
-/* ========== Home: Why Choose Us ========== */
-.home-why-choose {
+/* ========== Home: Why + How (Combined) ========== */
+.home-journey {
   background: var(--bg);
+}
+
+.home-journey__layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 22px;
+}
+
+.home-journey__panel {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.home-journey__panel-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 14px;
 }
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
 }
 
 .why-card {
-  background: var(--white);
+  background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 32px 24px;
+  border-radius: 12px;
+  padding: 18px 16px;
   transition: border-color 0.3s ease;
 }
 
@@ -261,42 +288,41 @@
 
 .why-card__num {
   display: block;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--primary-light);
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .why-card__title {
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .why-card__desc {
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   color: var(--text-light);
-  line-height: 1.65;
-}
-
-/* ========== Home: How It Works ========== */
-.home-how {
-  background: var(--white);
+  line-height: 1.5;
 }
 
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
 .step-card {
   text-align: left;
-  padding: 32px 24px;
-  border-radius: var(--radius);
+  padding: 14px 16px;
+  border-radius: 12px;
   border: 1px solid var(--border);
   background: var(--bg);
   transition: border-color 0.3s ease;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  column-gap: 12px;
 }
 
 .step-card:hover {
@@ -304,130 +330,26 @@
 }
 
 .step-card__num {
-  display: block;
-  font-size: 2.4rem;
+  display: inline-block;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--primary-light);
-  margin-bottom: 16px;
+  margin-bottom: 0;
+  min-width: 34px;
   line-height: 1;
+  grid-row: span 2;
 }
 
 .step-card__title {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 
 .step-card__desc {
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   color: var(--text-light);
-  line-height: 1.65;
-}
-
-/* ========== Home: We've Already Helped ========== */
-.home-helped {
-  background: var(--primary-dark);
-  color: var(--white);
-  text-align: center;
-}
-
-.home-helped__eyebrow {
-  display: block;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.55);
-  margin-bottom: 14px;
-}
-
-.home-helped__title {
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  font-weight: 800;
-  margin-bottom: 16px;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-}
-
-.home-helped__count {
-  color: var(--secondary-light, #5FC9C2);
-}
-
-.home-helped__subtitle {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.65);
-  max-width: 640px;
-  margin: 0 auto 40px;
-  line-height: 1.7;
-}
-
-.home-helped__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-.home-helped__card {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius);
-  padding: 32px 24px;
-  text-align: left;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.home-helped__card:hover {
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateY(-4px);
-}
-
-.home-helped__card-icon {
-  width: 52px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  margin-bottom: 18px;
-  color: var(--secondary-light, #5FC9C2);
-}
-
-.home-helped__card-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: var(--white);
-}
-
-.home-helped__card-desc {
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
-
-.home-helped__card-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--secondary-xlight);
-  transition: gap 0.25s ease;
-  cursor: pointer;
-}
-
-.home-helped__card:hover .home-helped__card-btn {
-  gap: 10px;
-}
-
-.home-helped__card-price {
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: 800;
-  color: var(--secondary-xlight);
-  margin-bottom: 14px;
+  line-height: 1.5;
 }
 
 /* ========== Home: Testimonials ========== */
@@ -443,7 +365,7 @@
 
 .testimonial-card {
   background: var(--white);
-  padding: 32px;
+  padding: 24px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   transition: border-color 0.3s ease;
@@ -484,6 +406,10 @@
 
 /* ========== Responsive ========== */
 @media (max-width: 1024px) {
+  .home-page--compact .section {
+    padding: 58px 0;
+  }
+
   .home-services__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -497,21 +423,25 @@
     min-height: 320px;
   }
 
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .home-helped__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .home-journey__layout {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 768px) {
+  .home-page--compact .section {
+    padding: 48px 0;
+  }
+
+  .home-page--compact .section-subtitle {
+    margin-bottom: 28px;
+  }
+
   .home-about-breezyee__image img {
     min-height: 260px;
   }
 
-  .steps-grid {
+  .why-grid {
     grid-template-columns: 1fr;
   }
 
@@ -522,14 +452,6 @@
 
 @media (max-width: 600px) {
   .home-services__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .home-helped__grid {
     grid-template-columns: 1fr;
   }
 }
@@ -616,7 +538,7 @@
 .home-contact__grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
-  gap: 48px;
+  gap: 28px;
   align-items: start;
 }
 
@@ -624,14 +546,14 @@
 .home-contact__form-wrap {
   background: var(--bg);
   border-radius: var(--radius);
-  padding: 40px;
+  padding: 28px;
   box-shadow: var(--shadow-md);
 }
 
 .home-contact__form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
 }
 
 .home-contact__field {
@@ -680,8 +602,8 @@
 
 .home-contact__submit {
   align-self: flex-start;
-  padding: 16px 36px;
-  font-size: 1rem;
+  padding: 14px 28px;
+  font-size: 0.95rem;
 }
 
 /* Success state */
@@ -724,7 +646,7 @@
 .home-contact__info-card {
   background: var(--bg);
   border-radius: var(--radius);
-  padding: 28px 28px 24px;
+  padding: 20px 20px 16px;
   border: 1px solid var(--border);
 }
 
@@ -739,7 +661,7 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-size: 1.6rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: var(--primary);
   margin-bottom: 8px;

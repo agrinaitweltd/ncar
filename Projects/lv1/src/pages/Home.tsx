@@ -30,39 +30,10 @@ const testimonials = [
   { name: 'Dave T.', location: 'Local Customer', text: 'Fence looked awful with green algae. Messaged for a quote, got a quick reply, and within a few days it was done. Looks fantastic. Highly recommend.', rating: 5 },
 ]
 
-const cleaningCategories = [
-  {
-    icon: 'driveway',
-    title: 'Driveway Washing',
-    desc: 'Restore your driveway to a like-new condition. Oil, moss and grime removed with high-pressure cleaning.',
-    price: 'From £60',
-  },
-  {
-    icon: 'patio',
-    title: 'Patio Cleaning',
-    desc: 'Blast away moss, algae and stains from patio slabs. Safe for all outdoor surfaces.',
-    price: 'From £40',
-  },
-  {
-    icon: 'fence',
-    title: 'Fence & Wall Washing',
-    desc: 'Rejuvenate weathered fences and walls. Green algae and mould removed completely.',
-    price: 'From £40',
-  },
-  {
-    icon: 'bin',
-    title: 'Bin Cleaning',
-    desc: 'Hygienic bin cleaning inside and out. Fresh, odour-free results every time.',
-    price: 'From £5/bin',
-  },
-]
-
 export default function Home() {
   const servicesRef = useInView<HTMLElement>()
   const aboutRef = useInView<HTMLElement>()
-  const whyRef = useInView<HTMLElement>()
-  const howRef = useInView<HTMLElement>()
-  const categoriesRef = useInView<HTMLElement>()
+  const journeyRef = useInView<HTMLElement>()
   const testimonialsRef = useInView<HTMLElement>()
   const contactRef = useInView<HTMLElement>()
 
@@ -101,7 +72,7 @@ export default function Home() {
   }
 
   return (
-    <>
+    <div className="home-page home-page--compact">
       <Seo
         title="LV Exterior Cleaning – Exterior Cleaning Services"
         description="LV Exterior Cleaning — teenage-owned exterior cleaning business. Driveways, patios, fences, bin cleaning and more. Message for a FREE quote: 07555 653736."
@@ -174,86 +145,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== Why Choose Us ===== */}
-      <section className="section home-why-choose" ref={whyRef}>
+      {/* ===== Why + How ===== */}
+      <section className="section home-journey" ref={journeyRef}>
         <div className="container">
           <span className="section-eyebrow fade-in">Why Choose Us</span>
-          <h2 className="section-title fade-in">The standard you deserve</h2>
+          <h2 className="section-title fade-in">The standard you deserve, made simple</h2>
           <p className="section-subtitle fade-in">
-            We hold ourselves to high standards so your property always looks its best.
+            High standards, clear process, and reliable results every time.
           </p>
-          <div className="why-grid stagger-children">
-            {whyUs.map((item, i) => (
-              <div className="why-card flip-in-left" key={item.title}>
-                <span className="why-card__num">0{i + 1}</span>
-                <h3 className="why-card__title">{item.title}</h3>
-                <p className="why-card__desc">{item.desc}</p>
+          <div className="home-journey__layout">
+            <div className="home-journey__panel home-journey__panel--why stagger-children">
+              <h3 className="home-journey__panel-title fade-in">Why People Book LV</h3>
+              <div className="why-grid">
+                {whyUs.map((item, i) => (
+                  <div className="why-card flip-in-left" key={item.title}>
+                    <span className="why-card__num">0{i + 1}</span>
+                    <h4 className="why-card__title">{item.title}</h4>
+                    <p className="why-card__desc">{item.desc}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== How It Works ===== */}
-      <section className="section home-how" ref={howRef}>
-        <div className="container">
-          <span className="section-eyebrow fade-in">How It Works</span>
-          <h2 className="section-title fade-in">Simple as 1, 2, 3</h2>
-          <p className="section-subtitle fade-in">
-            Getting your property cleaned has never been easier.
-          </p>
-          <div className="steps-grid stagger-children">
-            {steps.map((step) => (
-              <div className="step-card slide-in-up" key={step.num}>
-                <span className="step-card__num">{step.num}</span>
-                <h3 className="step-card__title">{step.title}</h3>
-                <p className="step-card__desc">{step.desc}</p>
+            </div>
+            <div className="home-journey__panel home-journey__panel--steps stagger-children">
+              <h3 className="home-journey__panel-title fade-in">How It Works</h3>
+              <div className="steps-grid">
+                {steps.map((step) => (
+                  <div className="step-card slide-in-up" key={step.num}>
+                    <span className="step-card__num">{step.num}</span>
+                    <h4 className="step-card__title">{step.title}</h4>
+                    <p className="step-card__desc">{step.desc}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== Cleaning Categories ===== */}
-      <section className="section home-helped" ref={categoriesRef}>
-        <div className="container">
-          <span className="home-helped__eyebrow fade-in">Our Specialities</span>
-          <h2 className="home-helped__title fade-in">
-            Everything your property needs — <span className="home-helped__count">cleaned</span>
-          </h2>
-          <p className="home-helped__subtitle fade-in">
-            From driveways to dustbins, we cover all aspects of exterior cleaning with professional-grade equipment.
-          </p>
-          <div className="home-helped__grid stagger-children">
-            {cleaningCategories.map((cat) => (
-              <div className="home-helped__card slide-in-bottom" key={cat.title}>
-                <div className="home-helped__card-icon">
-                  {cat.icon === 'driveway' && (
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                  )}
-                  {cat.icon === 'patio' && (
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                  )}
-                  {cat.icon === 'fence' && (
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/><line x1="6" y1="6" x2="6" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="18" y1="6" x2="18" y2="20"/><polyline points="6 6 12 4 18 6"/></svg>
-                  )}
-                  {cat.icon === 'bin' && (
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg>
-                  )}
-                </div>
-                <h3 className="home-helped__card-title">{cat.title}</h3>
-                <p className="home-helped__card-desc">{cat.desc}</p>
-                <span className="home-helped__card-price">{cat.price}</span>
-                <a
-                  href="#contact"
-                  className="home-helped__card-btn"
-                  onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }) }}
-                >
-                  Get a Quote
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </a>
-              </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -358,7 +282,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 
