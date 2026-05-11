@@ -1,0 +1,8 @@
+{
+  "name": "Nexa Trader Uganda",
+  "description": "Premium automotive marketplace for Uganda. Buy, sell, and explore vehicles from verified dealerships across Kampala, Entebbe, and beyond.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}
