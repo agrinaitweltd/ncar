@@ -1,0 +1,44 @@
+{
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/export-import",
+      "destination": "/export-import.html"
+    },
+    {
+      "source": "/sourcing",
+      "destination": "/sourcing.html"
+    },
+    {
+      "source": "/products/coffee",
+      "destination": "/products/coffee.html"
+    },
+    {
+      "source": "/products/fruits",
+      "destination": "/products/coffee.html"
+    },
+    {
+      "source": "/products/grains",
+      "destination": "/products/coffee.html"
+    },
+    {
+      "source": "/products/other-produce",
+      "destination": "/products/coffee.html"
+    }
+  ]
+}
